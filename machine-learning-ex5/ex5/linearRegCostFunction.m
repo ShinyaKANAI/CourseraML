@@ -21,7 +21,7 @@ grad = zeros(size(theta));
 
 predict = X * theta;
 error = sum((predict .- y) .^ 2) ./ (2*m);
-penalty = sum(theta .^ 2) .* lambda ./ (2*m);
+penalty = sum(theta(2:end) .^ 2) .* lambda ./ (2*m);
 J = error + penalty;
 
 grad_error = (X' * (predict .- y)) ./ m;
