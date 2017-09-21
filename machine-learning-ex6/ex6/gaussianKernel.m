@@ -15,12 +15,13 @@ sim = 0;
 %               sigma
 %
 %
-
-
-
-
+dif =  x1 .- x2;
+child = sum(dif .^ 2);
+mother = 2*(sigma ^ 2);
+family = child / mother;
+sim = exp(-family);
 
 
 % =============================================================
-    
+
 end
